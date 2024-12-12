@@ -2,13 +2,13 @@ from dataclasses import dataclass
 from logging import Logger
 
 from polars import from_dict
-from dq.singleton import Singleton
-from dq.http import LazyHttpRequest
-from dq.dataclass_factory import Dataclass
+from .singleton import Singleton
+from .http import LazyHttpRequest
+from .dataclass_factory import Dataclass
 
-from dq.logger import LoggerFactory
-from dq.logger import inject_logger
-from dq.logger import debug_print
+from .logger import LoggerFactory
+from .logger import inject_logger
+from .logger import debug_print
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request

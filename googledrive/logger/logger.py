@@ -1,5 +1,5 @@
-from dq.singleton import Singleton
-from dq.colors import Color
+from ..singleton import Singleton
+from ..colors import Color
 import datetime
 import logging
 import pytz

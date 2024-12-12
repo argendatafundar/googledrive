@@ -1,4 +1,4 @@
-from dq.properties import classproperty
+from ..properties import classproperty
 
 class SingletonMeta(type):
     """
