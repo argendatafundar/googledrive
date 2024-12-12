@@ -4,5 +4,5 @@ setup(
     name = 'googledrive',
     version = '0.1',
     packages = find_packages(),
-    install_requires=['slepy>=0.1'],
+    install_requires=['slepy>=0.1', 'polars>=1.17.1'],
 )
