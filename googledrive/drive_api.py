@@ -231,6 +231,13 @@ class DriveFilesApi(Singleton):
             includePermissionsForView: Optional[str] = None,
             includeLabels: Optional[str] = None
             ) -> LazyHttpRequest[Any, dict]: ...
+        
+        # TODO: Completar esto.
+        # La docu de la API está poco clara. Usan un parámetro que no está
+        # documentado. Por ahora el unico uso que tiene esto es crear
+        # carpetas en ArgenData; pero deberiamos darle forma a este método.
+        @execute_service_method
+        def create(**kwargs): ...
     
 
     class drives:
@@ -241,6 +248,7 @@ class DriveFilesApi(Singleton):
             pageToken: Optional[str] = None
             ) -> LazyHttpRequest[Any, dict]: ...
         
+
     class http:
         @staticmethod
         def download_from_response(response: dict):
