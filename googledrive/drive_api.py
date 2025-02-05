@@ -174,6 +174,12 @@ def execute_service_method(f: Callable):
         
         return _
 
+class classproperty(property):
+    """Utilidad para crear propiedades de clase"""
+
+    def __get__(self, cls, owner):
+        return classmethod(self.fget).__get__(None, owner)()
+
 @inject_logger
 class DriveFilesApi(Singleton):
     log: Logger
@@ -195,6 +201,10 @@ class DriveFilesApi(Singleton):
             ]
         )
         self.log.info("Authenticated to Google Drive.")
+
+    @classproperty
+    def token(self):
+        return self._drive._http.credentials.token
     
     
     class files:
