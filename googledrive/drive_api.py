@@ -238,6 +238,9 @@ class DriveFilesApi(Singleton):
         # carpetas en ArgenData; pero deberiamos darle forma a este método.
         @execute_service_method
         def create(**kwargs): ...
+
+        @execute_service_method
+        def export(fileId: str, mimeType: str) -> LazyHttpRequest[Any, bytes]: ...
     
 
     class drives:
